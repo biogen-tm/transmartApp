@@ -128,7 +128,7 @@ grails.project.dependency.resolution = {
 
         if (!dm) {
             compile ':rdc-rmodules:1.2.3'
-            runtime ':transmart-core:1.2.3'
+            runtime ':transmart-core:1.2.3.biogen'
             compile ':transmart-gwas:1.2.3'
             //// already included in transmart-gwas
             //compile ':transmart-legacy-db:1.2.3'
