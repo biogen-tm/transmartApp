@@ -29,9 +29,13 @@ script:
     - grails test-app --non-interactive --stacktrace
     - grails war
 
-notifications:
-  hipchat:
-    rooms:
-      secure: "fdLLuPbpAjUDsuDRU4aFDnmvdPpw7VIrrBB7AOnSMSla4O3Mf4GAxhf35kuo8t2uBDHktqo8aETTkchZCzlDu1GyVREQJGkQv/SjBwa5PE9H262j6YMXW36rXWzkWruXMala6f1UQdQnU+8+ddbUNcyrgxxI6UzwBXDdIzDJa8k="
-    on_success: change
-    on_failure: always
+deploy:
+  provider: releases
+  api_key:
+    secure: PrAa8dbmMsU3pWLiXhgD+ILuBxG40JT+jdDGwTWrsqSbtitYSBGQvXpNchSn2lfrUjlYP0Fl6NolykR0MNqRDj9bT3RbACenuf5ajJiixh8zdIuZOsflAG4lWLij/Rp99SEcv949Uvz1MPQggtorvETGtRtiApwQsSXeeZiJkmY=
+  file: target/transmart.war
+  on:
+    repo: biogen-tm/transmartApp
+    branch: release-1.2.3.biogen
+    all_branches: true
+
